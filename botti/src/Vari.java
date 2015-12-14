@@ -5,7 +5,7 @@ import lejos.utility.Delay;
 /**
  * Color sensor logic
  * @author danielml
- * @version 0.0.1
+ * @version 0.0.2
  */
 public class Vari {
 	private EV3ColorSensor sensori;
@@ -24,12 +24,12 @@ public class Vari {
 	 	this.sensori.close();
 	}
 	/**
-	 * Hyökkääkö vai ei?
+	 * Alarm yes/no
 	 * @return true or false
 	 */
-	public boolean hyokkaa() {
+	public boolean halyttaa() {
 		boolean i = false;
-		if (this.nakyy == Color.RED || this.nakyy == Color.BLACK || this.nakyy == Color.GRAY) {
+		if (this.nakyy == Color.BLACK) {
 			i = true;
 		}
 		return i;
